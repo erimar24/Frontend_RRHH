@@ -1,0 +1,62 @@
+$breakpoint: 768px;
+
+.card {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-end: auto;
+    border: 2px solid green;
+    border-radius: 10px;
+    &__h1{
+        text-align: center;
+    }
+
+    &__ {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        div{
+            margin-right: 12px;
+            width: 50%;
+            &:first-child{
+                margin-left: 0;
+                text-align: end;
+            }
+            input{
+                width: 100%;
+            }
+            label{
+                &.MuiInputLabel-root{
+                    margin-left: 122px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    button{
+        width: 200;
+        margin-top: 35px;
+    }
+    @media (max-width: $breakpoint) {
+        width: 80%;
+        .row{
+            flex-direction: column;
+            div{
+                margin-right: 0;
+                margin-left: 0;
+                width: 100%;
+                &:first-child{
+                    text-align: center;
+                }
+                input{
+                    margin-top: 15px;
+                }
+                label{
+                    &.MuiInputLabel-root {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
